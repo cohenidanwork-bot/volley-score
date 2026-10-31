@@ -1,0 +1,33 @@
+:root { color-scheme: light; --paper: #F4F1EA; --ink: #121A2E; --soft: #5A6275; --rule: rgba(18,26,46,.14);
+        --court: #E4572E; --deep: #B93A12; --net: #0B0F1A; }
+* { box-sizing: border-box; }
+body { max-width: 42rem; margin: 0 auto; padding: 1.25rem 1.25rem 5rem; background: var(--paper); color: var(--ink);
+       font: 500 16px/1.6 Barlow, system-ui, sans-serif; }
+header { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: .75rem;
+         border-bottom: 2px solid var(--ink); margin-bottom: 2.5rem; }
+header nav a { margin-left: 1rem; }
+.mark, h1, h2, header nav a, footer, dt { font-family: "Barlow Condensed", Barlow, sans-serif; }
+.mark { font-weight: 800; font-size: 1.25rem; text-transform: uppercase; letter-spacing: .02em; color: var(--ink);
+        text-decoration: none; }
+header nav a, footer { text-transform: uppercase; letter-spacing: .08em; font-weight: 600; font-size: .875rem; }
+h1 { font-weight: 800; text-transform: uppercase; font-size: 2.6rem; line-height: .95; margin: 0 0 .5rem; }
+h2 { font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: .95rem; margin: 2.25rem 0 .6rem;
+     display: flex; gap: .75rem; align-items: center; }
+h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+.sub { color: var(--soft); margin: 0 0 1.75rem; }
+a { color: var(--deep); text-underline-offset: 2px; }
+ul { padding-left: 1.2rem; }
+li { margin: .35rem 0; }
+dl { margin: 0; }
+dt { font-weight: 600; text-transform: uppercase; letter-spacing: .06em; margin-top: 1.25rem; }
+dd { margin: .2rem 0 0; color: var(--ink); }
+hr { border: 0; border-top: 2px solid var(--ink); margin: 4rem 0 2rem; }
+footer { margin-top: 3.5rem; padding-top: .75rem; border-top: 1px solid var(--rule); color: var(--soft); }
+footer a { color: var(--soft); }
+.court { display: flex; aspect-ratio: 2 / 1; border: 3px solid var(--ink); margin-bottom: 2rem; }
+.court span { flex: 1; display: grid; place-items: center; color: #fff; font: 800 clamp(3rem, 16vw, 6rem)/1
+              "Barlow Condensed", sans-serif; font-variant-numeric: tabular-nums; }
+.court span:first-child { background: #D62828; }
+.court span:last-child { background: #1D4ED8; }
+.court i { width: 14px; background: var(--net); }
+@media (max-width: 30rem) { h1 { font-size: 2.1rem; } }
